@@ -247,6 +247,9 @@
             ['NPS lift', '+18']
           ]
         },
+        screens: [
+          { src: 'assets/AgoraImage.webp', label: 'agora Dealer app' },
+        ],
         tags: ['PM/Eng partnership', 'Mentorship', 'Process']
       }
     ],
