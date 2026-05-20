@@ -229,6 +229,9 @@
             ['DS adoption', '92% coverage']
           ]
         },
+        screens: [
+          { src: 'assets/AgoraImage.webp', label: 'agora Dealer app' },
+        ],
         tags: ['Hiring', 'Process', 'Design Ops']
       },
       {
@@ -256,7 +259,7 @@
     product: [
       {
         id: 'myhealth', idx: '03', title: 'MyHealth by Caris — patient portal',
-        role: 'Design Director', meta: '2025 — Built with Claude',
+        role: 'Design Director', meta: '2026 — Built with Claude',
         narrative: {
           head: 'A secure portal for genetic screening patients to track samples end-to-end.',
           body: [
@@ -276,25 +279,25 @@
         tags: ['Healthcare', 'Portal', 'Hi-fi prototype']
       },
       {
-        id: 'burke', idx: '04', title: 'Burke PlayPortal — Roles & Permissions',
-        role: 'Design Engineer', meta: '2025 — Built with Claude',
+        id: 'burke', idx: '04', title: 'Burke PlayPortal — Rep Reporting',
+        role: 'Design Engineer', meta: '2026 — Built with Figma',
         narrative: {
-          head: 'Admin tooling for a B2B portal: users, roles, bundles, scopes.',
+          head: 'Rep Reporting for Burke Firms',
           body: [
-            'Redesigned the permissions surface so non-technical admins can compose roles from preset bundles without ever seeing a JSON schema. Built two view modes — chips for quick scanning, matrix for power users.'
+            'Redesign of an aniquated reporting sweet, to help Rep Firms understand how their buisness is doing throughout the year.'
           ],
           kvs: [
             ['Personas', 'Admin · Rep · Firm'],
-            ['Views', 'Chips · Matrix'],
-            ['Permissions', '17 roles'],
-            ['Tool', 'Claude (this project)']
+            ['Views', 'Desktop · Mobile'],
+            ['Reports', '17'],
+            ['Tool', 'Figma (this project)']
           ]
         },
         screens: [
-          { src: 'assets/burke-roles.png', label: 'USER ROLES · /admin/users' },
-          { src: 'assets/burke-roles-2.png', label: 'ROLE BUNDLES · /admin/roles' }
+          { src: 'assets/repreporting.png', label: 'REO REPORTING · Overview' },
+          { src: 'assets/repreporting2.png', label: 'REO REPORTING  · Market Share' }
         ],
-        tags: ['Admin', 'Permissions', 'B2B']
+        tags: ['Reporting', 'Rep', 'B2B']
       }
     ],
     marketing: [
