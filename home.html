@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ben Mercuri — Design Director / Design Engineer</title>
+  <meta name="description" content="Design director and design engineer. 15 years of product, marketing and brand. Denver, CO." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <div class="nav-brand">
+        <span class="mark">BM</span>
+        <span>Ben Mercuri</span>
+        <span class="muted" style="margin-left:4px">// portfolio</span>
+      </div>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#brands">Brands</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-status">
+        <span class="dot"></span>
+        <span>Available · Q3 2026</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">
+          <span class="tag">DESIGN DIRECTOR × DESIGN ENGINEER</span>
+          <span class="muted">// Denver, CO</span>
+        </div>
+        <h1 class="display">
+          <span>I'm a design director</span><br />
+          <span class="light">who </span><span class="accent">codes</span><span class="light">,</span><br />
+          <span>builds with </span><span class="accent">AI</span><span>,</span><br />
+          <span class="light">and leads </span><span>teams.</span>
+        </h1>
+        <p class="hero-lead">
+          <b>15 years</b> of product, marketing and brand design. I run teams, draw the system, and ship the code — the boundary between design and engineering keeps getting thinner, and I'm here for it.
+        </p>
+        <div class="hero-meta">
+          <div>
+            <span class="k">EXPERIENCE</span>
+            <span class="v">15+ yrs</span>
+          </div>
+          <div>
+            <span class="k">DESIGNERS LED</span>
+            <span class="v">6</span>
+          </div>
+          <div>
+            <span class="k">PROD COMMITS</span>
+            <span class="v">240+</span>
+          </div>
+          <div>
+            <span class="k">TOOLS</span>
+            <span class="v">Figma · React · Claude</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Playground (right side) -->
+      <div class="playground" id="playground">
+        <div class="pg-bar">
+          <div class="dots"><i></i><i></i><i></i></div>
+          <span class="file">~/components/Button.tsx</span>
+          <span class="live"><span class="dot" style="width:6px;height:6px"></span> LIVE</span>
+        </div>
+
+        <div class="pg-tabs" id="pg-tabs">
+          <button class="on" data-pg-tab="preview">Preview</button>
+          <button data-pg-tab="code">Code</button>
+          <button data-pg-tab="props">Props</button>
+        </div>
+
+        <!-- Preview panel -->
+        <div class="pg-body" data-pg-panel="preview">
+          <div class="pg-row">
+            <span class="pg-label">color <span class="prop">— string</span></span>
+            <div class="swatches" id="swatches"></div>
+          </div>
+
+          <div class="pg-row">
+            <span class="pg-label">size <span class="prop">— number</span></span>
+            <div class="slider-wrap">
+              <input type="range" min="11" max="20" step="1" value="14" class="slider" id="size-slider" />
+              <span class="slider-val" id="size-val">14px</span>
+            </div>
+          </div>
+
+          <div class="pg-row">
+            <span class="pg-label">glow <span class="prop">— boolean</span></span>
+            <div class="toggle-row">
+              <div class="toggle on" id="glow-toggle" role="switch" aria-checked="true"></div>
+              <span class="tiny dim" id="glow-val">true</span>
+            </div>
+          </div>
+
+          <div class="pg-row" style="margin-top:8px">
+            <span class="pg-label">→ output</span>
+            <div class="demo-stage">
+              <button class="demo-btn" id="demo-btn">
+                <span>Ship it</span>
+                <span class="count" id="demo-count">0</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Code panel -->
+        <div class="pg-body" data-pg-panel="code" style="padding-top:18px; display:none">
+          <pre class="pg-pre" id="pg-code-pre"></pre>
+          <div class="tiny muted" style="margin-top:8px">
+            // every control above is bound. shipped as a real component to design system.
+          </div>
+        </div>
+
+        <!-- Props panel -->
+        <div class="pg-body" data-pg-panel="props" style="padding-top:18px; font-size:12px; display:none">
+          <table class="pg-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="accent">color</td><td>string</td><td class="fg">#d2ff4a</td></tr>
+              <tr><td class="accent">size</td><td>number</td><td class="fg">14</td></tr>
+              <tr><td class="accent">glow</td><td>boolean</td><td class="fg">true</td></tr>
+              <tr><td class="accent">onClick</td><td>() =&gt; void</td><td class="fg">—</td></tr>
+              <tr><td class="accent">children</td><td>ReactNode</td><td class="fg">—</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pg-code">
+          <span class="c" id="pg-code-strip">// rendered live · 0 clicks · 17px touch target</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="stats">
+    <div class="wrap stats-grid">
+      <div class="stat">
+        <div class="k">Years in design</div>
+        <div class="v"><span class="accent">15</span>+</div>
+        <div class="sub">Crocs · Under Armour · Agora · Craftsy</div>
+      </div>
+      <div class="stat">
+        <div class="k">Direct reports led</div>
+        <div class="v">12</div>
+        <div class="sub">Across 4 organizations</div>
+      </div>
+      <div class="stat">
+        <div class="k">Hires made</div>
+        <div class="v">8</div>
+        <div class="sub">Product, brand &amp; DesignOps</div>
+      </div>
+      <div class="stat">
+        <div class="k">Prototypes shipped</div>
+        <div class="v"><span class="accent">30</span>+</div>
+        <div class="sub">Mostly build with Figma</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORK ============ -->
+  <section id="work" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-num">003 / Selected work</div>
+        <h2 class="section-title">A directorial role, <span class="italic">with my hands on the keys.</span></h2>
+      </div>
+    </div>
+    <div class="wrap">
+      <div id="work-mount"></div>
+    </div>
+  </section>
+
+  <!-- ============ BRANDS ============ -->
+  <section id="brands" class="brands">
+    <div class="wrap">
+      <div class="brands-head">
+        <span>006 / Brands I've designed for</span>
+        <span class="line"></span>
+        <span>scroll →</span>
+      </div>
+    </div>
+    <div class="marquee" id="marquee">
+      <!-- Populated by script.js -->
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section id="process" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-num">005 / Process</div>
+        <h2 class="section-title">How I work <span class="italic">as a design engineer.</span></h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-num">→ 01</div>
+          <h3>Design in the browser</h3>
+          <p>Figma is for thinking. The browser is where ideas have to survive contact with real text, real data, and real touch targets. I do my hi-fi work in code so what I show is what ships.</p>
+          <div class="tools">
+            <span class="tool">HTML</span>
+            <span class="tool">CSS</span>
+            <span class="tool">React</span>
+            <span class="tool">Tailwind</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">→ 02</div>
+          <h3>Prototype with Claude</h3>
+          <p>Pair-design with an LLM to compress the cycle: sketch → prototype → critique → ship. The result is a clickable artifact stakeholders can actually use before a single engineer commits time.</p>
+          <div class="tools">
+            <span class="tool">Claude</span>
+            <span class="tool">JSX</span>
+            <span class="tool">Live data</span>
+            <span class="tool">Tweaks</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">→ 03</div>
+          <h3>Hand off without throwing it</h3>
+          <p>Real handoff is opening a PR. I write the tokens, primitives, and a few real screens — eng inherits a working artifact, not a Figma export and a prayer.</p>
+          <div class="tools">
+            <span class="tool">PRs</span>
+            <span class="tool">Tokens</span>
+            <span class="tool">Storybook</span>
+            <span class="tool">Trio sync</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="section-num" style="margin-bottom:28px">007 / Contact</div>
+      <h2>
+        Let's <span class="accent">build</span><br />
+        something.
+      </h2>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:benmercuri7@gmail.com">
+          <span class="k">EMAIL · primary</span>
+          <span class="v">benmercuri7@gmail.com</span>
+          <span class="sub">Best for project inquiries and intro chats.</span>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/ben-mercuri-6253b41b/" target="_blank" rel="noreferrer">
+          <span class="k">BOOK A CALL</span>
+          <span class="v">30 min · intro</span>
+          <span class="sub">Schedule a short call to talk leadership, hiring, or a build.</span>
+        </a>
+        <a class="contact-card" href="/assets/Resume.png" download="YourName_Resume.png">
+          <span class="k">RÉSUMÉ</span>
+          <span class="v">Download · PDF</span>
+          <span class="sub">Full history, references, the long version.</span>
+        </a>
+      </div>
+    </div>
+    <div class="wrap">
+      <footer>
+        <span>© 2026 Ben Mercuri Designs</span>
+        <span>v6.0<span id="footer-date"></span></span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- ============ TWEAKS PANEL (Theme switcher) ============ -->
+  <div id="tweaks-panel" class="twk-panel" hidden>
+    <div class="twk-hd" id="twk-drag-handle">
+      <b>Tweaks</b>
+      <button class="twk-x" id="twk-close" aria-label="Close tweaks">✕</button>
+    </div>
+    <div class="twk-body">
+      <div class="twk-sect">Theme</div>
+      <div class="theme-grid" id="theme-grid"></div>
+      <div class="twk-note">
+        Each palette swaps background, line, foreground and accent tokens. The site adapts in place — no reload.
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating button to open tweaks panel -->
+  <button id="tweaks-toggle" class="tweaks-toggle" aria-label="Open theme tweaks">
+    <span>⚙</span>
+    <span>Theme</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
