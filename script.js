@@ -251,6 +251,7 @@
           ]
         },
         screens: [
+          { src: 'assets/agora.png', label: 'agora Dealer app' },
           { src: 'assets/AgoraImage.webp', label: 'agora Dealer app' },
         ],
         tags: ['PM/Eng partnership', 'Mentorship', 'Process']
@@ -294,8 +295,8 @@
           ]
         },
         screens: [
-          { src: 'assets/repreporting.png', label: 'REO REPORTING · Overview' },
-          { src: 'assets/repreporting2.png', label: 'REO REPORTING  · Market Share' }
+          { src: 'assets/repreporting.png', label: 'REP REPORTING · Overview' },
+          { src: 'assets/repreporting2.png', label: 'REP REPORTING  · Market Share' }
         ],
         tags: ['Reporting', 'Rep', 'B2B']
       }
@@ -316,24 +317,30 @@
             ['Email CTR', '+34%']
           ]
         },
+        screens: [
+          { src: 'assets/lectric.png', label: 'MARKETING SITE · redesign' },
+        ],
         tags: ['Ecommerce', 'CRO', 'Brand']
       },
       {
-        id: 'crocs', idx: '06', title: 'Crocs — global campaign systems',
-        role: 'Marketing Designer', meta: '2014 — 2018',
+        id: 'Morpheus', idx: '06', title: 'Morpheus — global campaign systems',
+        role: 'Front-end Dev', meta: '2015 — 2018',
         narrative: {
-          head: 'Built the toolkits that let regional teams ship on-brand at speed.',
+          head: 'Rebuilt the marketing site so a complex enterprise product finally felt approachable.',
           body: [
-            'Designed campaign systems — type, color, photography rules, layout templates — for seasonal launches across NA, EMEA and APAC. Reduced creative-team turnaround from 3 weeks to 4 days.'
+            'Translated a full visual redesign into a performant, scalable front-end — component architecture, responsive layouts, and motion — for Morpheus hybrid cloud platform. Reduced page load times and gave the marketing team a system they could update without dev support.'
           ],
           kvs: [
-            ['Regions served', '3 (NA/EMEA/APAC)'],
-            ['Turnaround', '3w → 4d'],
-            ['Templates shipped', '60+'],
-            ['Brand audits passed', '100%']
+            ['PAGES BUILT', '20+'],
+            ['LIGHTHOUSE SCORE', '90+'],
+            ['TEMPLATES SHIPPED', '6+'],
+            ['COMPONENTS', '40+']
           ]
         },
-        tags: ['Brand systems', 'Campaigns', 'Global']
+        screens: [
+          { src: 'assets/morpheusimage.png', label: 'MORPHEUS DATA · Marketing Site' },
+        ],
+        tags: ['Marketing Site', 'HTML5', 'SCSS']
       }
     ],
     code: [
