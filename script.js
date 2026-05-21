@@ -580,7 +580,7 @@
   // BRANDS MARQUEE
   // ====================================================================
   function initMarquee() {
-    const list = ['Crocs', 'Under Armour', 'Agora', 'Craftsy', 'Lectric eBikes', 'Regis Corp', 'Caris', 'Burke', 'Tag Heuer'];
+    const list = ['Crocs', 'Under Armour', 'Agora', 'Craftsy', 'Lectric eBikes', 'Regis Corp', 'Caris', 'Burke', 'Registrar Corp'];
     const seq = [...list, ...list]; // double for seamless loop
     const mq = document.getElementById('marquee');
     mq.innerHTML = seq.map(b =>
