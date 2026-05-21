@@ -230,31 +230,30 @@
           ]
         },
         screens: [
+          { src: 'assets/agora.png', label: 'agora Dealer app' },
           { src: 'assets/AgoraImage.webp', label: 'agora Dealer app' },
         ],
         tags: ['Hiring', 'Process', 'Design Ops']
       },
       {
-        id: 'craftsy', idx: '02', title: 'Cross-functional product trio at Craftsy',
-        role: 'Lead UX', meta: '2019 — 2022',
+        id: 'Registrar', idx: '02', title: 'Registrar Corp — design leadership',
+        role: 'Design Director', meta: '2019 — 2022',
         narrative: {
-          head: 'Pairing PM, Eng and Design so tightly the seams disappeared.',
+          head: 'Led marketing and product design in parallel — and built both teams from the ground up.',
           body: [
-            'Replaced linear handoff with a weekly trio sync — PM brings the problem, design brings the prototype, eng brings constraints. We cut spec-to-ship time by 40% and ended the era of "that\'s not what I asked for".',
-            'Coached three junior designers into senior roles. Two now lead their own pods.'
+            'Directed design across two functions simultaneously at the worlds largest FDA compliance company — owning the marketing site, campaign output, and the core SaaS app used by 30,000+ companies across 160 countries. Grew both teams, established design systems, and created the processes that let a small team punch well above its weight.'
           ],
           kvs: [
-            ['Spec → ship', '−40%'],
-            ['Direct reports', '5'],
-            ['Promotions', '3 jr → sr'],
-            ['NPS lift', '+18']
+            ['TEAM GREW', '0-4 designers'],
+            ['FUNCTIONS LED', '2 (marketing + product)'],
+            ['USERS REACHED', '30,000+ companies'],
+            ['COUNTRIES', '160']
           ]
         },
         screens: [
-          { src: 'assets/agora.png', label: 'agora Dealer app' },
           { src: 'assets/AgoraImage.webp', label: 'agora Dealer app' },
         ],
-        tags: ['PM/Eng partnership', 'Mentorship', 'Process']
+        tags: ['Leadership', 'Mentorship', 'Design-systems']
       }
     ],
     product: [
