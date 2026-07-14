@@ -241,7 +241,7 @@
         narrative: {
           head: 'Designed the operating system for an organization delivering meals to thousands of vulnerable seniors.',
           body: [
-            'Led design of a full client management platform for VNA Texas's Meals on Wheels program — covering intake, routing, scheduling, clinical assessments, payer management, and compliance tracking. Turned a fragmented operational workflow into a single, coherent tool that case managers actually want to use.'
+            'Led design of a full client management platform for VNA Texas\' Meals on Wheels program — covering intake, routing, scheduling, clinical assessments, payer management, and compliance tracking. Turned a fragmented operational workflow into a single, coherent tool that case managers actually want to use.'
           ],
           kvs: [
             ['CLIENTS MANAGED', '5,000 + seniors'],
