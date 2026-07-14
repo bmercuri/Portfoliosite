@@ -236,24 +236,25 @@
         tags: ['Hiring', 'Process', 'Design Ops']
       },
       {
-        id: 'Registrar', idx: '02', title: 'Registrar Corp — design leadership',
-        role: 'Design Director', meta: '2019 — 2022',
+        id: 'NVA Texas', idx: '02', title: 'VNA Texas — Meals on Wheels',
+        role: 'Design Director', meta: '2026',
         narrative: {
-          head: 'Led marketing and product design in parallel — and built both teams from the ground up.',
+          head: 'Designed the operating system for an organization delivering meals to thousands of vulnerable seniors.',
           body: [
-            'Directed design across two functions simultaneously at the worlds largest FDA compliance company — owning the marketing site, campaign output, and the core SaaS app used by 30,000+ companies across 160 countries. Grew both teams, established design systems, and created the processes that let a small team punch well above its weight.'
+            'Led design of a full client management platform for VNA Texas's Meals on Wheels program — covering intake, routing, scheduling, clinical assessments, payer management, and compliance tracking. Turned a fragmented operational workflow into a single, coherent tool that case managers actually want to use.'
           ],
           kvs: [
-            ['TEAM GREW', '0-4 designers'],
-            ['FUNCTIONS LED', '2 (marketing + product)'],
-            ['USERS REACHED', '30,000+ companies'],
-            ['COUNTRIES', '160']
+            ['CLIENTS MANAGED', '5,000 + seniors'],
+            ['SCREENS DESIGNED', '10+'],
+            ['WORKFLOW AREAS', '6 (intake · routing · billing · clinical · scheduling · admin)'],
+            ['DOCS TRACKED', 'Per client']
           ]
         },
         screens: [
-          { src: 'assets/AgoraImage.webp', label: 'agora Dealer app' },
+          { src: 'assets/MOW1.png', label: 'Meals on Wheels' },
+          { src: 'assets/MOW2.png', label: 'Meals on Wheels' },
         ],
-        tags: ['Leadership', 'Mentorship', 'Design-systems']
+        tags: ['product-design', 'UX', 'AI-Design']
       }
     ],
     product: [
