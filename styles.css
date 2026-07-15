@@ -876,3 +876,33 @@ footer {
   .nav-links { display: none; }
   .nav-inner { grid-template-columns: 1fr auto; }
 }
+
+@media (max-width: 600px) {
+  /* Hero eyebrow: stack the location under the role tag */
+  .eyebrow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  /* Work category tabs: scroll horizontally instead of cramming 4 across */
+  .work-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .work-tabs::-webkit-scrollbar { display: none; }
+  .work-tabs button {
+    flex: 0 0 auto;
+    padding: 14px 18px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+  .work-tabs button.on::after { bottom: 0; }
+
+  /* Work rows: tighten spacing and title size on small screens */
+  .work-row { gap: 14px; padding: 18px 0; }
+  .work-row .title { font-size: 22px; }
+  .work-row .toggle-pill { padding: 5px 9px; }
+}
