@@ -878,6 +878,9 @@ footer {
 }
 
 @media (max-width: 600px) {
+  /* Hide the hero stats row on phones — it wraps awkwardly */
+  .hero-meta { display: none; }
+
   /* Hero eyebrow: stack the location under the role tag */
   .eyebrow {
     flex-direction: column;
