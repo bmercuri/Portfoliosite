@@ -51,7 +51,6 @@
       if (k.startsWith('--')) root.style.setProperty(k, v);
     });
     currentTheme = name;
-    // Update playground swatch + demo button so accent changes flow through
     const accent = t['--accent'];
     if (playgroundState) {
       playgroundState.color = accent;
@@ -66,7 +65,6 @@
     const closeBtn = document.getElementById('twk-close');
     const grid = document.getElementById('theme-grid');
 
-    // Build theme cards
     Object.entries(THEMES).forEach(([key, t]) => {
       const btn = document.createElement('button');
       btn.className = 'theme-btn' + (key === currentTheme ? ' on' : '');
@@ -108,7 +106,6 @@
   };
 
   function initPlayground() {
-    // Tabs
     const tabsRoot = document.getElementById('pg-tabs');
     tabsRoot.addEventListener('click', (e) => {
       const btn = e.target.closest('button[data-pg-tab]');
@@ -121,7 +118,6 @@
       });
     });
 
-    // Swatches
     const sw = document.getElementById('swatches');
     SWATCHES.forEach(hex => {
       const b = document.createElement('button');
@@ -138,7 +134,6 @@
       sw.appendChild(b);
     });
 
-    // Size slider
     const sizeSlider = document.getElementById('size-slider');
     sizeSlider.addEventListener('input', (e) => {
       playgroundState.size = Number(e.target.value);
@@ -147,7 +142,6 @@
       renderPlaygroundCode();
     });
 
-    // Glow toggle
     const glowToggle = document.getElementById('glow-toggle');
     glowToggle.addEventListener('click', () => {
       playgroundState.glow = !playgroundState.glow;
@@ -158,7 +152,6 @@
       renderPlaygroundCode();
     });
 
-    // Demo button — click counter
     const demoBtn = document.getElementById('demo-btn');
     demoBtn.addEventListener('click', () => {
       playgroundState.count += 1;
@@ -180,7 +173,6 @@
     btn.style.boxShadow = playgroundState.glow
       ? `0 0 24px -4px ${playgroundState.color}`
       : 'none';
-    // Sync swatch selection visual (when color comes from theme change)
     document.querySelectorAll('.swatch').forEach(s => {
       s.classList.toggle('on', s.dataset.swatch === playgroundState.color);
     });
@@ -229,38 +221,31 @@
             ['DS adoption', '92% coverage']
           ]
         },
-        screens: [
-          { src: 'assets/agora.png', label: 'agora Dealer app' },
-          { src: 'assets/AgoraImage.webp', label: 'agora Dealer app' },
-        ],
         tags: ['Hiring', 'Process', 'Design Ops']
       },
       {
-        id: 'NVA Texas', idx: '02', title: 'VNA Texas — Meals on Wheels',
-        role: 'Design Director', meta: '2026',
+        id: 'craftsy', idx: '02', title: 'Cross-functional product trio at Craftsy',
+        role: 'Lead UX', meta: '2019 — 2022',
         narrative: {
-          head: 'Designed the operating system for an organization delivering meals to thousands of vulnerable seniors.',
+          head: 'Pairing PM, Eng and Design so tightly the seams disappeared.',
           body: [
-            'Led design of a full client management platform for VNA Texas\' Meals on Wheels program — covering intake, routing, scheduling, clinical assessments, payer management, and compliance tracking. Turned a fragmented operational workflow into a single, coherent tool that case managers actually want to use.'
+            'Replaced linear handoff with a weekly trio sync — PM brings the problem, design brings the prototype, eng brings constraints. We cut spec-to-ship time by 40% and ended the era of "that\'s not what I asked for".',
+            'Coached three junior designers into senior roles. Two now lead their own pods.'
           ],
           kvs: [
-            ['CLIENTS MANAGED', '5,000 + seniors'],
-            ['SCREENS DESIGNED', '10+'],
-            ['WORKFLOW AREAS', '6 (intake · routing · billing · clinical · scheduling · admin)'],
-            ['DOCS TRACKED', 'Per client']
+            ['Spec → ship', '−40%'],
+            ['Direct reports', '5'],
+            ['Promotions', '3 jr → sr'],
+            ['NPS lift', '+18']
           ]
         },
-        screens: [
-          { src: 'assets/MOW1.png', label: 'Meals on Wheels' },
-          { src: 'assets/MOW2.png', label: 'Meals on Wheels' },
-        ],
-        tags: ['product-design', 'UX', 'AI-Design']
+        tags: ['PM/Eng partnership', 'Mentorship', 'Process']
       }
     ],
     product: [
       {
         id: 'myhealth', idx: '03', title: 'MyHealth by Caris — patient portal',
-        role: 'Design Director', meta: '2026 — Built with Claude',
+        role: 'Design Director', meta: '2025 — Built with Claude',
         narrative: {
           head: 'A secure portal for genetic screening patients to track samples end-to-end.',
           body: [
@@ -280,25 +265,25 @@
         tags: ['Healthcare', 'Portal', 'Hi-fi prototype']
       },
       {
-        id: 'burke', idx: '04', title: 'Burke PlayPortal — Rep Reporting',
-        role: 'Design Engineer', meta: '2026 — Built with Figma',
+        id: 'burke', idx: '04', title: 'Burke PlayPortal — Roles & Permissions',
+        role: 'Design Engineer', meta: '2025 — Built with Claude',
         narrative: {
-          head: 'Rep Reporting for Burke Firms',
+          head: 'Admin tooling for a B2B portal: users, roles, bundles, scopes.',
           body: [
-            'Redesign of an aniquated reporting sweet, to help Rep Firms understand how their buisness is doing throughout the year.'
+            'Redesigned the permissions surface so non-technical admins can compose roles from preset bundles without ever seeing a JSON schema. Built two view modes — chips for quick scanning, matrix for power users.'
           ],
           kvs: [
             ['Personas', 'Admin · Rep · Firm'],
-            ['Views', 'Desktop · Mobile'],
-            ['Reports', '17'],
-            ['Tool', 'Figma (this project)']
+            ['Views', 'Chips · Matrix'],
+            ['Permissions', '17 roles'],
+            ['Tool', 'Claude (this project)']
           ]
         },
         screens: [
-          { src: 'assets/repreporting.png', label: 'REP REPORTING · Overview' },
-          { src: 'assets/repreporting2.png', label: 'REP REPORTING  · Market Share' }
+          { src: 'assets/burke-roles.png', label: 'USER ROLES · /admin/users' },
+          { src: 'assets/burke-roles-2.png', label: 'ROLE BUNDLES · /admin/roles' }
         ],
-        tags: ['Reporting', 'Rep', 'B2B']
+        tags: ['Admin', 'Permissions', 'B2B']
       }
     ],
     marketing: [
@@ -317,30 +302,24 @@
             ['Email CTR', '+34%']
           ]
         },
-        screens: [
-          { src: 'assets/lectric.png', label: 'MARKETING SITE · redesign' },
-        ],
         tags: ['Ecommerce', 'CRO', 'Brand']
       },
       {
-        id: 'Morpheus', idx: '06', title: 'Morpheus — global campaign systems',
-        role: 'Front-end Dev', meta: '2015 — 2018',
+        id: 'crocs', idx: '06', title: 'Crocs — global campaign systems',
+        role: 'Marketing Designer', meta: '2014 — 2018',
         narrative: {
-          head: 'Rebuilt the marketing site so a complex enterprise product finally felt approachable.',
+          head: 'Built the toolkits that let regional teams ship on-brand at speed.',
           body: [
-            'Translated a full visual redesign into a performant, scalable front-end — component architecture, responsive layouts, and motion — for Morpheus hybrid cloud platform. Reduced page load times and gave the marketing team a system they could update without dev support.'
+            'Designed campaign systems — type, color, photography rules, layout templates — for seasonal launches across NA, EMEA and APAC. Reduced creative-team turnaround from 3 weeks to 4 days.'
           ],
           kvs: [
-            ['PAGES BUILT', '20+'],
-            ['LIGHTHOUSE SCORE', '90+'],
-            ['TEMPLATES SHIPPED', '6+'],
-            ['COMPONENTS', '40+']
+            ['Regions served', '3 (NA/EMEA/APAC)'],
+            ['Turnaround', '3w → 4d'],
+            ['Templates shipped', '60+'],
+            ['Brand audits passed', '100%']
           ]
         },
-        screens: [
-          { src: 'assets/morpheusimage.png', label: 'MORPHEUS DATA · Marketing Site' },
-        ],
-        tags: ['Marketing Site', 'HTML5', 'SCSS']
+        tags: ['Brand systems', 'Campaigns', 'Global']
       }
     ],
     code: [
@@ -430,7 +409,6 @@
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
 
-  // Lightweight syntax color, ported from work.jsx's colorize()
   function colorize(text) {
     if (!text) return '';
     const patterns = [
@@ -554,7 +532,6 @@
 
     mount.innerHTML = tabsHTML + listHTML;
 
-    // Tab clicks
     mount.querySelectorAll('.work-tabs button').forEach(btn => {
       btn.addEventListener('click', () => {
         workState.tab = btn.dataset.tab;
@@ -563,7 +540,6 @@
       });
     });
 
-    // Row clicks
     mount.querySelectorAll('.work-row').forEach(row => {
       const id = row.dataset.row;
       const toggle = () => {
@@ -581,8 +557,8 @@
   // BRANDS MARQUEE
   // ====================================================================
   function initMarquee() {
-    const list = ['Crocs', 'Under Armour', 'Agora', 'Craftsy', 'Lectric eBikes', 'Regis Corp', 'Caris', 'Burke', 'Registrar Corp'];
-    const seq = [...list, ...list]; // double for seamless loop
+    const list = ['Crocs', 'Under Armour', 'Agora', 'Craftsy', 'Lectric eBikes', 'Regis Corp', 'Caris', 'Burke', 'Tag Heuer'];
+    const seq = [...list, ...list];
     const mq = document.getElementById('marquee');
     mq.innerHTML = seq.map(b =>
       `<span class="brand">${esc(b)}</span><span class="sep">✦</span>`
