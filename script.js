@@ -221,25 +221,32 @@
             ['DS adoption', '92% coverage']
           ]
         },
+        screens: [
+          { src: 'assets/AgoraImage.webp', label: 'DASHBOARD' },
+          { src: 'assets/agora.png', label: 'BRANDING' }
+        ],
         tags: ['Hiring', 'Process', 'Design Ops']
       },
       {
-        id: 'craftsy', idx: '02', title: 'Cross-functional product trio at Craftsy',
-        role: 'Lead UX', meta: '2019 — 2022',
+        id: 'mealsonwheels', idx: '02', title: 'Cross-functional product build at Meals on Wheels',
+        role: 'Lead UX', meta: '2026',
         narrative: {
-          head: 'Pairing PM, Eng and Design so tightly the seams disappeared.',
+          head: 'Pairing PM, Eng, Research and Design so tightly the seams disappeared.',
           body: [
-            'Replaced linear handoff with a weekly trio sync — PM brings the problem, design brings the prototype, eng brings constraints. We cut spec-to-ship time by 40% and ended the era of "that\'s not what I asked for".',
-            'Coached three junior designers into senior roles. Two now lead their own pods.'
+            'Use Claude to generate the first drafts of user flows, wireframes, and copy. Iterate in real-time with PM and Eng until we have a working prototype. Ship the same day. Repeat.'
           ],
           kvs: [
             ['Spec → ship', '−40%'],
-            ['Direct reports', '5'],
-            ['Promotions', '3 jr → sr'],
-            ['NPS lift', '+18']
+            ['Features Build', '25'],
+            ['Customers Served', '6k+'],
+            ['Departments Helped', '8+']
           ]
         },
-        tags: ['PM/Eng partnership', 'Mentorship', 'Process']
+        screens: [
+          { src: 'assets/MOW_01.png', label: 'DASHBOARD' },
+          { src: 'assets/MOW_02.png', label: 'DETAILS' }
+        ],
+        tags: ['PM/Eng partnership', 'Research', 'Process']
       }
     ],
     product: [
